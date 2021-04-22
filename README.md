@@ -1,15 +1,15 @@
 # Node JS - Reading cert on Linux App Service - Proof of Concept
 ## Overview
 - This sample reads the certs from the file system at /var/ssl/* & uses PEM to export private cert details to logs. https://www.npmjs.com/package/pem
-- 
-## Prerequisite to run sample
+
+## Prerequisite to run Sample
 - Public & Private cert loaded to your App Service
-- Followed Steps to make certificate accessible: https://docs.microsoft.com/en-us/azure/app-service/configure-ssl-certificate-in-code
-- App Setting: WEBSITE_LOAD_CERTIFICATES | <thumbprint>
+- Followed Steps to make certificates accessible: https://docs.microsoft.com/en-us/azure/app-service/configure-ssl-certificate-in-code
+- Public cert loaded to file system
 
 
-## Creating a Public cert with your existing .p12 & importing to Azure 
-1. 
+## Creating a public key with your existing .p12 & importing to Azure 
+1. Steps below assume, your private key is loaded to your app.
 
 2. Create your cert directory & create the empty .cer file via SSH "https://<app-name>.scm.azurewebsites.net/ssh"
 ```
